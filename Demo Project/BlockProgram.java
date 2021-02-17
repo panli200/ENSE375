@@ -8,12 +8,12 @@ public class BlockProgram
     */
   
     public BlockFactory blockFactory;
-    public ArrayList blocks;
+    public ArrayList<Block> blocks;
   
     public BlockProgram()
     {
-        BlockFactory blockFactory = new BlockFactory();
-        ArrayList blocks = new ArrayList<Block>();
+        blockFactory = new BlockFactory();
+        blocks = new ArrayList<Block>();
     }
   
     public static void main(String[] args)
