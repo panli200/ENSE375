@@ -1,4 +1,4 @@
-public class RedMetalBlock.java
+public class RedMetalBlock
 {
 	/*
 		display() is overridden in the RedMetalBlock class to reflect the material changing from Plastic to Metal.
