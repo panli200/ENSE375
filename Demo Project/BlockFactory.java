@@ -11,7 +11,7 @@ public class BlockFactory
 			return new RedMetalBlock();
 		
 		else if (material == "Wood")
-			return new RedMetalBlock();
+			return new RedWoodBlock();
 		
 		else throw new IllegalArgumentException("No class definition for the name Red" + material + "Block");
 	}
