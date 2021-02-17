@@ -1,4 +1,4 @@
-public class RedMetalBlock
+public class RedMetalBlock extends RedBlock
 {
 	/*
 		display() is overridden in the RedMetalBlock class to reflect the material changing from Plastic to Metal.
