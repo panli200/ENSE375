@@ -1,6 +1,6 @@
 import java.lang.IllegalArgumentException;
 
-public class BlockFactory
+public abstract class BlockFactory
 {
 	public Block createBlock(String material)
 	{
