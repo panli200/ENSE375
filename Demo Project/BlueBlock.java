@@ -1,7 +1,7 @@
 public class BlueBlock extends Block
 {
     /*
-        The display() method is overridden to account for the Block's colour changing to blue.
+        The display() method is overridden to account for the Block's colour changing to blue. By default, this class satisfies the properties of BluePlasticBlock.
     */
     
     @Override
