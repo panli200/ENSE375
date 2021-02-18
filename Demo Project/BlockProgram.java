@@ -7,7 +7,7 @@ public class BlockProgram
         This file is heavily derived from the Winter 2021 ENSE 370 Lab #3 Assignment, which was written by Adam Tilson. It can be found at https://github.com/adamtilson/ense370/blob/main/lab-3/lab-doc.md
     */
   
-    public BlockFactory blockFactory();
+    public BlockFactory blockFactory;
     public ArrayList<Block> blocks;
   
     public BlockProgram()
