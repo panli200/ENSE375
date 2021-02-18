@@ -12,7 +12,7 @@ public class BlockProgram
   
     public BlockProgram()
     {
-        blockFactory = new BlockFactory();
+        blockFactory = new BlueBlockFactory(); // by default, the factory produces BlueBlocks
         blocks = new ArrayList<Block>();
     }
   
@@ -27,6 +27,15 @@ public class BlockProgram
         blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Wood"));
         blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Wood"));
       
+        blockProgram.blockFactory = new RedBlockFactory(); // create six BlueBlocks, then switch over to RedBlocks
+        
+        blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Plastic"));
+        blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Plastic"));
+        blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Metal"));
+        blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Metal"));
+        blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Wood"));
+        blockProgram.blocks.add(blockProgram.blockFactory.createBlock("Wood"));
+        
         for (Block block : blockProgram.blocks)
             block.display();
       
