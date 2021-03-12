@@ -21,7 +21,7 @@ public class PatientList
 
     public boolean deletePatient(int index)
     {
-	patientList.delete(index);
+	patientList.remove(index);
 	return true;
     }
 
@@ -38,6 +38,6 @@ public class PatientList
 
     public int getNumberofPatients()
     {
-	return patients.size();
+	return patientList.size();
     }
 }
