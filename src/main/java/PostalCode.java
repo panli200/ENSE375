@@ -21,19 +21,19 @@ public class PostalCode
 	// Throws an exception if the postal code is of an invalid format
         if (!isValidPostalCode(postalCode))
         {
-            throw new InvalidPostalCodeException("Invalid PostalCode");
+            throw new InvalidPostalCodeException();
 	}
 	    else this.postalCode = postalCode;
     }
 
     public int getRegionVerticalIndex() 
     {		
-	return Integer.parseInt(postalCode.charAt(2));
+	return Character.getNumericValue(postalCode.charAt(2));
     }
 
     public int getRegionHorizontalIndex() 
     {
-        return Integer.parseInt(postalCode.charAt(4));
+        return Character.getNumericValue(postalCode.charAt(4));
     }
 
     public String getPostalCode() 
