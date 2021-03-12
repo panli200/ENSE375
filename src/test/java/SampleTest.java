@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io;
+import java.io.*;
 
 /**
  * Example of how a Unit test can simulate System.in and System.out.
