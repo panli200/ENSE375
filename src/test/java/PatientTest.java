@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io;
+import java.io.*;
 
 /**
  * Unit test for Patient.
