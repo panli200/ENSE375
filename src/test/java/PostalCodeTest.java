@@ -26,6 +26,7 @@ public class PostalCodeTest
         assertFalse(postcalCode.isValidPostalCode());
     }
 
+    @Test
     public void getRegionVerticalIndex_Is_83(){
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
@@ -34,12 +35,15 @@ public class PostalCodeTest
 
     }
 
+    @Test
     public void getRegionVerticalIndex_Is_Not_115(){
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
         int regionVerticalIndex = postalCode.getRegionVerticalIndex();
         assertNotEquals(115,regionVerticalIndex);
     }
+    
+    @Test
     public void  getRegionHorizontalIndex_Is_0(){
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
@@ -48,6 +52,7 @@ public class PostalCodeTest
 
     }
 
+    @Test
     public void  getRegionHorizontalIndex_Is_Not_(){
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
