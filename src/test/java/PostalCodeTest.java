@@ -30,8 +30,7 @@ public class PostalCodeTest
             PostalCode postalCode = new PostalCode("S4S-0A2");
             assertFalse(postalCode.isValidPostalCode("S4S-0A2"));
         }
-        catch(InvalidPostalCodeException e){
-            
+        catch(InvalidPostalCodeException e){          
         }
        
     }
@@ -41,7 +40,7 @@ public class PostalCodeTest
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
             int regionVerticalIndex = postalCode.getRegionVerticalIndex();
-            assertEquals(83,regionVerticalIndex);
+            assertEquals(28,regionVerticalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
@@ -69,8 +68,7 @@ public class PostalCodeTest
             assertEquals(0,regionHorizontalIndex);
         }
         catch(InvalidPostalCodeException e){         
-        }
-       
+        }   
 
     }
 
