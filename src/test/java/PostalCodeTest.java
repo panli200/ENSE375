@@ -15,15 +15,13 @@ public class PostalCodeTest
     @Test
     public void isValidPostalCode_K1S_0A2(){
         PostalCode postalCode = new PostalCode();
-        postalCode="K1S-0A2";
-        assertTrue(postcalCode.isValidPostalCode());
+        assertTrue(postcalCode.isValidPostalCode("K1S-0A2"));
     }
 
     @Test
     public void is_Not_ValidPostalCode_S4S_0A2(){
         PostalCode postalCode = new PostalCode();
-        postalCode="S4S-0A2";
-        assertFalse(postcalCode.isValidPostalCode());
+        assertFalse(postcalCode.isValidPostalCode("S4S-0A2"));
     }
 
     @Test
