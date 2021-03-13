@@ -15,12 +15,13 @@ public class PatientList
      */
     public boolean addPatient(Patient patient)
     {
+	int initialSize = this.getNumberofPatients();
         patientList.add(patient);
 	
-	if (patient == this.getPatient(patient.getID()))
+	if (this.getNumberofPatients() > initialSize) // indicating that an element has been added
 	    return true;
 	    
-	else return false;
+	else return false; // the sizes are the same, indicating that no element was added
     }
 
     public boolean deletePatient(int index)
