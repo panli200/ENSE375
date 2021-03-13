@@ -53,7 +53,7 @@ public class PostalCodeTest
     }
 
     @Test
-    public void  getRegionHorizontalIndex_Is_Not_(){
+    public void  getRegionHorizontalIndex_Is_Not_9(){
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
         int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
