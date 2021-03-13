@@ -14,7 +14,7 @@ public class PatientListTest
         Patient patient;
         try {
             patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
@@ -30,7 +30,7 @@ public class PatientListTest
         Patient patient;
         try {
             patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
@@ -47,7 +47,7 @@ public class PatientListTest
         Patient patient;
         try {
             patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
@@ -64,7 +64,7 @@ public class PatientListTest
         Patient patient;
         try {
             patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
@@ -81,7 +81,7 @@ public class PatientListTest
         Patient patient;
         try {
             patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
@@ -99,21 +99,21 @@ public class PatientListTest
         
         try {
             patient1 = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
         
         try {
             patient2 = new Patient("John", "200347605", 21, new PostalCode("K1E-1H2"));
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
         
         try {
             patient3 = new Patient("Jane", "200347606", 21, new PostalCode("K1E-1L6"));
-        } catch (InvalidNameException | InvalidPostalCodeException e)
+        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
           {
               System.out.println("Invalid patient information.");   
           }
