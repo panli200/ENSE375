@@ -18,10 +18,13 @@ public class PatientListTest
           {
               System.out.println("Invalid patient information.");   
           }
-
-        PatientList patientList = new PatientList();
-        boolean patientAdded = patientList.addPatient(patient);
-        assertEquals(patientAdded, true);
+        
+        if (patient != null)
+        {
+            PatientList patientList = new PatientList();
+            boolean patientAdded = patientList.addPatient(patient);
+            assertEquals(patientAdded, true);
+        }
     }
     
     @Test
@@ -35,10 +38,13 @@ public class PatientListTest
               System.out.println("Invalid patient information.");   
           }
             
-        PatientList patientList = new PatientList();
-        patientList.addPatient(patient);
-        boolean patientDeleted = patientList.deletePatient(0);
-        assertEquals(patientDeleted, true);  
+        if (patient != null)
+        {
+            PatientList patientList = new PatientList();
+            patientList.addPatient(patient);
+            boolean patientDeleted = patientList.deletePatient(0);
+            assertEquals(patientDeleted, true); 
+        }
     }
     
     @Test
@@ -52,10 +58,13 @@ public class PatientListTest
               System.out.println("Invalid patient information.");   
           }
             
-        PatientList patientList = new PatientList();
-        patientList.addPatient(patient);
-        boolean patientDeleted = patientList.deletePatient(1);
-        assertEquals(patientDeleted, false);
+        if (patient != null)
+        {
+            PatientList patientList = new PatientList();
+            patientList.addPatient(patient);
+            boolean patientDeleted = patientList.deletePatient(1);
+            assertEquals(patientDeleted, false);
+        }
     }
     
     @Test
@@ -69,10 +78,13 @@ public class PatientListTest
               System.out.println("Invalid patient information.");   
           }
             
-        PatientList patientList = new PatientList();
-        patientList.addPatient(patient);
-        Patient retrievedPatient = patientList.getPatient("200347604");
-        assertEquals(patient, retrievedPatient);
+        if (patient != null)
+        {
+            PatientList patientList = new PatientList();
+            patientList.addPatient(patient);
+            Patient retrievedPatient = patientList.getPatient("200347604");
+            assertEquals(patient, retrievedPatient);
+        }
     }
     
     @Test
@@ -86,10 +98,13 @@ public class PatientListTest
               System.out.println("Invalid patient information.");   
           }
             
-        PatientList patientList = new PatientList();
-        patientList.addPatient(patient);
-        Patient retrievedPatient = patientList.getPatient("200000000");
-        assertEquals(retrievedPatient, null);
+        if (patient != null)
+        {
+            PatientList patientList = new PatientList();
+            patientList.addPatient(patient);
+            Patient retrievedPatient = patientList.getPatient("200000000");
+            assertEquals(patient, retrievedPatient);
+        }
     }
     
     @Test
@@ -118,10 +133,13 @@ public class PatientListTest
               System.out.println("Invalid patient information.");   
           }
         
-        PatientList patientList = new PatientList();
-        patientList.addPatient(patient1);
-        patientList.addPatient(patient2);
-        patientList.addPatient(patient3);
-        assertEquals(patientList.getNumberofPatients(), 3);
+        if (patient1 != null && patient2 != null && patient3 != null)
+        {
+            PatientList patientList = new PatientList();
+            patientList.addPatient(patient1);
+            patientList.addPatient(patient2);
+            patientList.addPatient(patient3);
+            assertEquals(patientList.getNumberofPatients(), 3);
+        }
     }
 }
