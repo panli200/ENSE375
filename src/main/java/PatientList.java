@@ -16,13 +16,22 @@ public class PatientList
     public boolean addPatient(Patient patient)
     {
         patientList.add(patient);
-	return true;
+	
+	if (patient == this.getPatient(patient.getID())
+	    return true;
+	    
+	else return false;
     }
 
     public boolean deletePatient(int index)
     {
+	int initialSize = this.getNumberofPatients();
 	patientList.remove(index);
-	return true;
+	
+	if (this.getNumberofPatients < initialSize) // indicating that an element has been removed
+	    return true;
+	    
+	else return false; // the sizes are the same, indicating that no element was removed
     }
 
     public Patient getPatient(String id)
