@@ -10,7 +10,12 @@ public class Patient
 		name = "Name";
 		ID = "000000000";
 		age = 25;
-		postalCode = "K1A-0A0";
+		try {
+		postalCode = new PostalCode("K1A-0A0");
+		} catch (InvalidPostalCodeException e)
+		  {
+			System.out.println("Invalid postal code.");	
+		  }
 	}
 	
 	public Patient(String name, String ID, int age, PostalCode postalCode) throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException 
