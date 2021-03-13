@@ -42,23 +42,6 @@ public class PatientListTest
     }
     
     @Test
-    public void DeletePatientNotInList_False()
-    {
-        Patient patient = new Patient();
-        try {
-            patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
-        } catch (InvalidNameException | InvalidPostalCodeException | InvalidAgeException | InvalidIDException e)
-          {
-              System.out.println("Invalid patient information.");   
-          }
-            
-        PatientList patientList = new PatientList();
-        patientList.addPatient(patient);
-        boolean patientDeleted = patientList.deletePatient(1);
-        assertEquals(patientDeleted, false);
-    }
-    
-    @Test
     public void RetrievePatientInList_True()
     {
         Patient patient = new Patient();
@@ -89,7 +72,7 @@ public class PatientListTest
         PatientList patientList = new PatientList();
         patientList.addPatient(patient);
         Patient retrievedPatient = patientList.getPatient("200000000");
-        assertEquals(patient, retrievedPatient);
+        assertNotEquals(patient, retrievedPatient);
     }
     
     @Test
