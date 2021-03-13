@@ -11,8 +11,9 @@ public class PatientListTest
     @Test
     public void AddPatient_True()
     {
+        Patient patient;
         try {
-            Patient patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
+            patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
@@ -26,8 +27,9 @@ public class PatientListTest
     @Test
     public void DeletePatientInList_True()
     {
+        Patient patient;
         try {
-            Patient patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
+            patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
@@ -42,8 +44,9 @@ public class PatientListTest
     @Test
     public void DeletePatientNotInList_False()
     {
+        Patient patient;
         try {
-            Patient patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
+            patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
@@ -58,8 +61,9 @@ public class PatientListTest
     @Test
     public void RetrievePatientInList_True()
     {
+        Patient patient;
         try {
-            Patient patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
+            patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
@@ -74,8 +78,9 @@ public class PatientListTest
     @Test
     public void RetrievePatientNotInList_False()
     {
+        Patient patient;
         try {
-        Patient patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
+            patient = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));  
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
@@ -90,22 +95,24 @@ public class PatientListTest
     @Test
     public void GetNumberofPatients_CorrectSize()
     {
+        Patient patient1, patient2, patient3;
+        
         try {
-            Patient patient1 = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));
+            patient1 = new Patient("Jacob", "200347604", 21, new PostalCode("K1E-1A4"));
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
           }
         
         try {
-            Patient patient2 = new Patient("John", "200347605", 21, new PostalCode("K1E-1H2"));
+            patient2 = new Patient("John", "200347605", 21, new PostalCode("K1E-1H2"));
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
           }
         
         try {
-            Patient patient3 = new Patient("Jane", "200347606", 21, new PostalCode("K1E-1L6"));
+            patient3 = new Patient("Jane", "200347606", 21, new PostalCode("K1E-1L6"));
         } catch (InvalidNameException | InvalidPostalCodeException e)
           {
               System.out.println("Invalid patient information.");   
