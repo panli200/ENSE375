@@ -17,7 +17,7 @@ public class PatientList
     {
         patientList.add(patient);
 	
-	if (patient == this.getPatient(patient.getID())
+	if (patient == this.getPatient(patient.getID()))
 	    return true;
 	    
 	else return false;
