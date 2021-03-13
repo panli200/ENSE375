@@ -46,7 +46,7 @@ public class PostalCodeTest
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
         int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
-        assertEquals(0,regionVerticalIndex);
+        assertEquals(0,regionHorizontalIndex);
 
     }
 
@@ -55,6 +55,6 @@ public class PostalCodeTest
         PostalCode postalCode = new PostalCode();
         postalCode="K1S-0A2";
         int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
-        assertNotEquals(9,regionVerticalIndex);
+        assertNotEquals(9,regionHorizontalIndex);
     }
 }
