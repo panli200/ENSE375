@@ -16,10 +16,11 @@ public class PostalCodeTest
     public void isValidPostalCode_K1S_0A2(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
+            assertTrue(postalCode.isValidPostalCode("K1S-0A2"));
         }
         catch(InvalidPostalCodeException e){         
         }
-        assertTrue(postalCode.isValidPostalCode("K1S-0A2"));
+        
     }
 
     @Test
@@ -27,22 +28,24 @@ public class PostalCodeTest
         
         try{
             PostalCode postalCode = new PostalCode("S4S-0A2");
+            assertFalse(postalCode.isValidPostalCode("S4S-0A2"));
         }
         catch(InvalidPostalCodeException e){
             
         }
-        assertFalse(postalCode.isValidPostalCode("S4S-0A2"));
+       
     }
 
     @Test
     public void getRegionVerticalIndex_Is_83(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
+            int regionVerticalIndex = postalCode.getRegionVerticalIndex();
+            assertEquals(83,regionVerticalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
-        int regionVerticalIndex = postalCode.getRegionVerticalIndex();
-        assertEquals(83,regionVerticalIndex);
+        
 
     }
 
@@ -50,22 +53,24 @@ public class PostalCodeTest
     public void getRegionVerticalIndex_Is_Not_115(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
+            int regionVerticalIndex = postalCode.getRegionVerticalIndex();
+            assertNotEquals(115,regionVerticalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
-        int regionVerticalIndex = postalCode.getRegionVerticalIndex();
-        assertNotEquals(115,regionVerticalIndex);
+        
     }
 
     @Test
     public void  getRegionHorizontalIndex_Is_0(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
+             int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
+            assertEquals(0,regionHorizontalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
-        int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
-        assertEquals(0,regionHorizontalIndex);
+       
 
     }
 
@@ -73,10 +78,11 @@ public class PostalCodeTest
     public void  getRegionHorizontalIndex_Is_Not_(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
+            int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
+            assertNotEquals(9,regionHorizontalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
-        int regionHorizontalIndex = postalCode.getRegionHorizontalIndex();
-        assertNotEquals(9,regionHorizontalIndex);
+        
     } 
 }
