@@ -17,6 +17,7 @@ public class PatientHistogramTest
 	@Test
     public void Delete_Histo() {
 		PatientHistogram patientHistogram = new PatientHistogram();
+	    	patientHistogram.addAPatientToRegion(1, 4);
 		patientHistogram.deleteAPatientFromRegion(1, 4);
         assertEquals(0, patientHistogram.getPatientsCountInRegion(1, 4)); //expected, actual
     }
