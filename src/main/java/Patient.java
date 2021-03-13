@@ -5,6 +5,14 @@ public class Patient
 	private int age;
 	private PostalCode postalCode;
 	
+	public Patient()
+	{
+		name = "Name";
+		ID = "000000000";
+		age = 25;
+		postalCode = "K1A-0A0";
+	}
+	
 	public Patient(String name, String ID, int age, PostalCode postalCode) throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException 
 	{
 		// Name needs to include only a-z, A-Z, and spaces and dots from beginning of line to end of line 
