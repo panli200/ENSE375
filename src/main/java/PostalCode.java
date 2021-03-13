@@ -1,6 +1,10 @@
 public class PostalCode 
 {
     private String postalCode;
+	
+    public PostalCode(){
+    }
+	
     public static boolean isValidPostalCode(String postalCode) 
     {	
 	if (postalCode.charAt(0) == 'K')
