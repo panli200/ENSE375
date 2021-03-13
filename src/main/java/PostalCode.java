@@ -5,25 +5,25 @@ public class PostalCode
     private String postalCode;
     public static boolean isValidPostalCode(String postalCode) 
     {	
-	if (postalCode.getChar(0) == 'K')
+	if (postalCode.charAt(0) == 'K')
 	{
-	    if (postalCode.getChar(1) == '1')
+	    if (postalCode.charAt(1) == '1')
 	    {
-		int ascii = postalCode.getChar(2);
+		int ascii = postalCode.charAt(2);
 		    
 		if (ascii >= 65 && ascii < 85)
 		{
-		    if (postalCode.getChar(3) == '-')
+		    if (postalCode.charAt(3) == '-')
 		    {
-			int ascii_2 = postalCode.getChar(4);
+			int ascii_2 = postalCode.charAt(4);
 			    
 			if (ascii_2 >= 48 && ascii_2 <= 57)
 			{
-			    int ascii_3 = postalCode.getChar(5);
+			    int ascii_3 = postalCode.charAt(5);
 				
 			    if (ascii_3 >= 65 && ascii_3 < 90)
 			    {
-				int ascii_4 = postalCode.getChar(6);
+				int ascii_4 = postalCode.charAt(6);
 				    
 				if (ascii_4 >= 48 && ascii_4 <= 57)
 				    return true;
