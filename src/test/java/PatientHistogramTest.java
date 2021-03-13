@@ -1,5 +1,5 @@
-import static org.junit.Assert.AsserEquals;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit test for PatientHistogram.
