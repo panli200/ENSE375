@@ -1,6 +1,3 @@
-package com.uregina.app;
-import com.uregina.exception.*;
-
 public class Patient 
 {
 	private String name;
@@ -8,7 +5,7 @@ public class Patient
 	private int age;
 	private PostalCode postalCode;
 	
-	public Patient(String name, String ID, int age, PostalCode postalCode) throws InvalidAgeException ,InvalidIDException, InvalidPostalCodeException, InvalidNameException
+	public Patient(String name, String ID, int age, PostalCode postalCode) throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException 
 	{
 		// Name needs to include only a-z, A-Z, and spaces and dots from beginning of line to end of line 
 		if(name.matches("^[a-zA-Z .]*$")){
