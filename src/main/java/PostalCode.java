@@ -5,15 +5,48 @@ public class PostalCode
     private String postalCode;
     public static boolean isValidPostalCode(String postalCode) 
     {	
-	//Postal Code regex 
-	String legalFormat = "^(?!.*[DFIOQU])[A-VXY][0-9][A-T] ?[0-9][A-Z][0-9]$";
-	Pattern pattern = Pattern.compile(legalFormat);
-	Matcher matcher = pattern.matcher(postalCode);
+	if (postalCode.getChar(0) == 'K')
+	{
+	    if (postalCode.getChar(1) == '1')
+	    {
+		int ascii = postalCode.getChar(2);
+		    
+		if (ascii >= 65 && ascii < 85)
+		{
+		    if (postalCode.getChar(3) == '-')
+		    {
+			int ascii_2 = postalCode.getChar(4);
+			    
+			if (ascii_2 >= 48 && ascii <= 57)
+			{
+			    int ascii_3 = postalCode.getChar(5);
+				
+			    if (ascii_3 >= 65 && ascii < 90)
+			    {
+				int ascii_4 = postalCode.getChar(6);
+				    
+				if (ascii_4 >= 48 && ascii_4 <= 57)
+				    return true;
+				    
+				else return false;
+			    }
+			    
+			    else return false;
+			}
+			    
+			else return false;
+		    }
+			
+		    else return false;
+		}
+		    
+		else return false;
+	    }
+		
+	    else return false;
+	}
 	    
-	if (matcher.matches())
-	    return true;	    
-	else 
-	    return false;
+	else return false;
     }
 	
     public PostalCode(String postalCode) throws InvalidPostalCodeException 
