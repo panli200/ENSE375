@@ -17,11 +17,11 @@ public class PostalCode
 		    {
 			int ascii_2 = postalCode.getChar(4);
 			    
-			if (ascii_2 >= 48 && ascii <= 57)
+			if (ascii_2 >= 48 && ascii_2 <= 57)
 			{
 			    int ascii_3 = postalCode.getChar(5);
 				
-			    if (ascii_3 >= 65 && ascii < 90)
+			    if (ascii_3 >= 65 && ascii_3 < 90)
 			    {
 				int ascii_4 = postalCode.getChar(6);
 				    
