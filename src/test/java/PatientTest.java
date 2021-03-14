@@ -83,9 +83,9 @@ public class PatientTest {
     }
 
 	// Exception should be thrown due to the vertical region index being out of bounds. 
-    @Test(expected = InvalidPostalCodeException.class)
-    public void invalidSetPostalCodeTrue() throws Exception{
+    @Test
+    public void invalidSetPostalCodeTrue() {
         Patient patient = new Patient("Alice", "200390111", 21, new PostalCode("K1E-1A4"));
-        patient.setPostalCode(new PostalCode("K1U-1A4"));
+        assertThrows(InvalidPostalCodeException.class, () -> { patient.setPostalCode(new PostalCode("K1U-1A4"));});
     }
 }
