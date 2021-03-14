@@ -18,9 +18,9 @@ public class PatientTest {
     }
 
 	// Exception thrown due to name including numbers and characters. 
-    @Test(expected = InvalidNameException.class)
+    @Test
     public void invalidPatientName() throws Exception {
-        Patient patient = new Patient("Alice5!", "200390111", 21, new PostalCode("K1E-1A4"));
+        assertThrows(InvalidNameException.class, () -> { Patient patient = new Patient("Alice5!", "200390111", 21, new PostalCode("K1E-1A4");});
     }
 
 	// Exception thrown due to negative age value.
