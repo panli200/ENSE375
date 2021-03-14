@@ -73,7 +73,7 @@ public class Patient
 	*/
 	public boolean setAge(int age)
 	{	
-		if(age < 0){
+		if(age > 0){
 			this.age = age;
 			return true;
 		} 
