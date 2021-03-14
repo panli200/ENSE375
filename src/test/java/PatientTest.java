@@ -64,7 +64,7 @@ public class PatientTest {
     public void validSetAgeTrue() throws Exception{
         Patient patient = new Patient("Alice", "200390111", 21, new PostalCode("K1E-1A4"));
         patient.setAge(75);
-        assertEquals(patient.getAge(),75);
+        assertTrue(patient.getAge() == 75);
     }
 
 	// Exception should be thrown to negative age value being set.
