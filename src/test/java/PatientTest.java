@@ -24,22 +24,22 @@ public class PatientTest {
     }
 
 	// Exception thrown due to negative age value.
-    @Test(expected = InvalidAgeException.class)
-    public void invalidPatientAge() throws Exception {
-        Patient patient = new Patient("Alice", "200390111", -21, new PostalCode("K1E-1A4"));
+    @Test
+    public void invalidPatientAge() {
+	    assertThrows(InvalidAgeException.class, () -> { Patient patient = new Patient("Alice", "200390111", -21, new PostalCode("K1E-1A4"));});
     }
 	
 	// Exception thrown due to no zero being included in the ID.
-	@Test(expected = InvalidIDException.class)
-    public void invalidPatientID() throws Exception {
-        Patient patient = new Patient("Alice", "111111111", 21, new PostalCode("K1E-1A4"));
+	@Test
+    public void invalidPatientID() {
+        assertThrows(InvalidIDException.class, () -> { Patient patient = new Patient("Alice", "111111111", 21, new PostalCode("K1E-1A4"));});
     }
 
 	// Exception should be thrown due to improper postal code formatting with the space instead of a dash:
 	// Well done (K1E-1A4) vs incorrect (K1E 1A4).
-    @Test(expected = InvalidPostalCodeException.class)
-    public void invalidPatientPostalCode() throws Exception {
-        Patient patient = new Patient("Alice", "200390111", 21, new PostalCode("K1E 1A4"));
+    @Test
+    public void invalidPatientPostalCode() {
+        assertThrows(InvalidPostalCodeException.class, () -> { Patient patient = new Patient("Alice", "200390111", 21, new PostalCode("K1E 1A4"));});
     }
 
     @Test
