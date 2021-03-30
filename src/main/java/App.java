@@ -158,17 +158,6 @@ public class App
     		System.out.println( "\tPatient Not Found" );
 		return false;
     	}
-	    
-	int index = 999; // will always be assigned a new value if the patient is in the list
-	    
-	for (int i = 0; i < patientList.getNumberofPatients(); i++)
-	{
-		if (patientList[i].getID().equals(patientID))
-		{
-			index = i;
-			break;
-		}
-	}
 	
     	int HIndex = patient.getPostalCode().getRegionHorizontalIndex();
     	int VIndex = patient.getPostalCode().getRegionVerticalIndex();
@@ -185,7 +174,7 @@ public class App
     	
 	if (VIndex != 0) // edge case where there are no neighbours to the left of the patient
 	{
-		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex - 1,HIndex));	
+		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex - 1, HIndex));	
 	}
 	    
 	if (VIndex != 19) // edge case where there are no neighbours to the right of the patient
@@ -209,7 +198,7 @@ public class App
     		return false;
     	}
 	    
-    	return patientList.deletePatient(index); // should ALWAYS be true
+    	return patientList.deletePatient(patient.getID()); // should ALWAYS be true
     }
     /**
     * <p>This method adds a patient to the patient list 
