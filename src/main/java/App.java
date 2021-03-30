@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * <b> Note: <b> not tested
  * 
  * @author George Daoud
- * @version 1.0
+ * @version 1.1 - adapted by Jacob Sauer
  */
 public class App 
 {
@@ -47,45 +47,47 @@ public class App
 		switch(choice)
 		{
 			case 1:
-				patientName=myInput.nextLine();
-				patientID=myInput.nextLine();
-				patientpostalCode=myInput.nextLine();
-				patientAge=myInput.nextInt();
-				if(app.addPatient(patientName,patientID,patientpostalCode,patientAge))
-				{
+				patientName = myInput.nextLine();
+				patientID = myInput.nextLine();
+				patientpostalCode = myInput.nextLine();
+				patientAge = myInput.nextInt();
+				
+				if (app.addPatient(patientName, patientID, patientpostalCode, patientAge))
 	 			   	System.out.println("\tPatient has been added successfully");				
-				}
-				else
-				{
-				  	System.out.println("\tPatient failed to be added");
-				}
+				
+				else System.out.println("\tPatient failed to be added");
+
 				break;
 			case 2:
-				patientID=myInput.nextLine();
-				if(app.deletePatient(patientID))
-				{
+				patientID = myInput.nextLine();
+				
+				if (app.deletePatient(patientID))
 	 			   	System.out.println("\tPatient has been removed successfully");				
-				}
-				else
-				{
-				  	System.out.println("\tPatient failed to be removed");
-				}
+				
+				else System.out.println("\tPatient failed to be removed");
+				
+				break;
 			case 3:
 				System.out.print("\t");
-				for(int j=0;j<10;j++){
-					System.out.print("  "+j);
-				}
+				
+				for (int j = 0; j < 10; j++)
+					System.out.print("  " + j);
+				
 				System.out.println("");
-				for(int i=0;i<20;i++){
-					System.out.print('A'+i);
-					for(int j=0;j<10;j++){
-						System.out.print("  "+app.riskCodeMap.getRiskInARegion(i,j));	
-					}
+				
+				for (int i = 0; i < 20; i++)
+				{
+					System.out.print('A' + i);
+					
+					for (int j = 0; j < 10; j++)
+						System.out.print("  " + app.riskCodeMap.getRiskInARegion(i, j));	
+					
 					System.out.println("");
 				}
+				
 				break;	
 			case 4:
-				stop=true;
+				stop = true;
 				break;
 			default:
 				System.out.println("Invalid choice");
@@ -118,16 +120,21 @@ public class App
 	Scanner myInput = new Scanner( System.in );
 	System.out.print( "Enter a number from 1 to 4: " );
 	int choice;
-	try{
-		choice= myInput.nextInt();
+	try
+	{
+		choice = myInput.nextInt();
 	}
+	
 	catch(Exception e)
 	{
-		choice=0;
+		choice = 0;
 	}
-	if(choice<0|choice>4){
-		choice=0;
+	    
+	if (choice < 0 || choice > 4)
+	{
+		choice = 0;
 	}
+	    
     	return choice;
     }
     /**
@@ -144,31 +151,65 @@ public class App
     */
     public boolean deletePatient(String patientID)
     {
-    	Patient patient=patientList.getPatient(patientID);
-    	if(patient==null)
+	Patient patient = patientList.getPatient(patientID);
+	    
+    	if (patient == null)
     	{
     		System.out.println( "\tPatient Not Found" );
+		return false;
     	}
-    	int HIndex=patient.getPostalCode().getRegionHorizontalIndex();
-    	int VIndex=patient.getPostalCode().getRegionVerticalIndex();
-    	if(!histogram.deleteAPatientFromRegion(VIndex,HIndex))
+	    
+	int index = 999; // will always be assigned a new value if the patient is in the list
+	    
+	for (int i = 0; i < patientList.getNumberofPatients(); i++)
+	{
+		if (patientList[i].getID().equals(patientID))
+		{
+			index = i;
+			break;
+		}
+	}
+	
+    	int HIndex = patient.getPostalCode().getRegionHorizontalIndex();
+    	int VIndex = patient.getPostalCode().getRegionVerticalIndex();
+	    
+    	if (!histogram.deleteAPatientFromRegion(VIndex, HIndex))
     	{
-	    	System.out.println( "\tFailed to update the patient Count" );
+	    	System.out.println("\tFailed to update the patient Count");
+		return false;
     	}
-    	int caseCount=histogram.getPatientsCountInRegion(VIndex,HIndex);
-    	ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
-    	for (int i=-1;i<=1;i+=2){
-    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
-    	}
-    	for (int i=-1;i<=1;i+=2){
-    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
-    	}
-    	if(!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
+	    
+    	int caseCount = histogram.getPatientsCountInRegion(VIndex, HIndex);
+    	
+	ArrayList<Integer> neighboursCaseCount = new ArrayList<Integer>();
+    	
+	if (VIndex != 0) // edge case where there are no neighbours to the left of the patient
+	{
+		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex - 1,HIndex));	
+	}
+	    
+	if (VIndex != 19) // edge case where there are no neighbours to the right of the patient
+	{
+		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex + 1, HIndex));	
+	}
+	    
+	if (HIndex != 0) // edge case where there are no neighbours above the patient
+	{
+		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex, HIndex - 1));	
+	}
+	    
+	if (HIndex != 9) // edge case where there are no neighbours below the patient
+	{
+		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex, HIndex + 1));	
+	}
+	    
+    	if (!riskCodeMap.updateRiskInARegion(VIndex, HIndex, caseCount, neighboursCaseCount))
     	{
     		System.out.println( "\tFailed to update the risk code map" );
     		return false;
     	}
-    	return true;
+	    
+    	return patientList.deletePatient(index); // should ALWAYS be true
     }
     /**
     * <p>This method adds a patient to the patient list 
