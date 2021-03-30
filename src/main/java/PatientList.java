@@ -50,4 +50,15 @@ public class PatientList
     {
 	return patientList.size();
     }
+	
+    public int getPatientIndex(String id) // added to accommodate the needs of 'deletePatient' in App.java
+    {
+	    for (Patient thisPatient : patientList)
+	    {
+		if (thisPatient.getID().equals(id))
+		    return patientList.indexOf(thisPatient);
+	    }
+	    
+	    return -1;
+    }
 }
