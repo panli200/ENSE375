@@ -47,10 +47,15 @@ public class App
 		switch(choice)
 		{
 			case 1:
+				System.out.println("Enter the Patient's name: ");
 				patientName = myInput.nextLine();
+				System.out.println("Enter the Patient's ID: ");
 				patientID = myInput.nextLine();
+				System.out.println("Enter the Patient's postal code (of the form K1x-xxx): ");
 				patientpostalCode = myInput.nextLine();
+				System.out.println("Enter the Patient's age: ");
 				patientAge = myInput.nextInt();
+				myInput.nextLine(); // clears the current line on which the 'age' integer was entered
 				
 				if (app.addPatient(patientName, patientID, patientpostalCode, patientAge))
 	 			   	System.out.println("\tPatient has been added successfully");				
@@ -59,6 +64,7 @@ public class App
 
 				break;
 			case 2:
+				System.out.println("Enter the ID of the Patient that you want to delete: ");
 				patientID = myInput.nextLine();
 				
 				if (app.deletePatient(patientID))
