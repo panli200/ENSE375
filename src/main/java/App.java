@@ -198,7 +198,7 @@ public class App
     		return false;
     	}
 	    
-    	return patientList.deletePatient(patient.getID()); // should ALWAYS be true
+    	return patientList.deletePatient(patientList.getPatientIndex(patient.getID())); // should ALWAYS be true
     }
     /**
     * <p>This method adds a patient to the patient list 
