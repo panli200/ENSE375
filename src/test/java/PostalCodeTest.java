@@ -36,12 +36,11 @@ public class PostalCodeTest
     }
 
     @Test
-    //The character 'S' has a numeric value represented as: 28
-    public void getRegionVerticalIndex_Is_28(){
+    public void getRegionVerticalIndex_Is_18(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
             int regionVerticalIndex = postalCode.getRegionVerticalIndex();
-            assertEquals(28,regionVerticalIndex);
+            assertEquals(18, regionVerticalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
