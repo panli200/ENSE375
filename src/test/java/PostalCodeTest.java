@@ -37,11 +37,11 @@ public class PostalCodeTest
 
     @Test
    
-    public void getRegionVerticalIndex_Is_19(){
+    public void getRegionVerticalIndex_Is_18(){
         try{
             PostalCode postalCode = new PostalCode("K1S-0A2");
             int regionVerticalIndex = postalCode.getRegionVerticalIndex();
-            assertEquals(19,regionVerticalIndex);
+            assertEquals(18, regionVerticalIndex);
         }
         catch(InvalidPostalCodeException e){         
         }
