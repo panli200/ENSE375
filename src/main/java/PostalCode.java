@@ -59,8 +59,9 @@ public class PostalCode
     }
 
     public int getRegionVerticalIndex() 
-    {		
-	return Character.getNumericValue(postalCode.charAt(2));
+    {	
+	int postalCodeInt = (int) postalCode.charAt(2);
+	return (postalCodeInt - 'A') + 1;
     }
 
     public int getRegionHorizontalIndex() 
