@@ -60,7 +60,7 @@ public class PostalCode
 
     public int getRegionVerticalIndex() 
     {		
-	return Character.getNumericValue(postalCode.charAt(2));
+	return Character.getNumericValue(postalCode.charAt(2)-'A')+1;
     }
 
     public int getRegionHorizontalIndex() 
