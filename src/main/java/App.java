@@ -274,8 +274,8 @@ public class App
     		return false;
 	    }
     
-    	int HIndex = postalCode.getRegionHorizontalIndex();
-    	int VIndex = postalCode.getRegionVerticalIndex();
+    	int HIndex = patient.getPostalCode().getRegionHorizontalIndex();
+    	int VIndex = patient.getPostalCode().getRegionVerticalIndex();
     
     	if (!histogram.addAPatientToRegion(VIndex,HIndex))
 	    {
@@ -313,6 +313,6 @@ public class App
     		return false;
 	    }
     
-    	return true;
+    	return patientList.addPatient(patient);
     }
 }
