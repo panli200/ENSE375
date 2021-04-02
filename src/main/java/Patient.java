@@ -29,11 +29,26 @@ public class Patient
 		}
 
 		// Patient ID needs to be a 9-digit string with a non-zero digit, length needs to be 9 and can only include 0-9
-		if(ID.matches("(?=.*0)^[0-9]{9}$")){
+		/*if (ID.matches("(?=.*0)^[0-9]{9}$")){
 			this.ID = ID;
 		} 
+		
+		else throw new InvalidIDException(ID);*/
+		
+		int zerothElement = (int) ID.charAt(0);
+		
+		if (zerothElement < 49 || zerothElement > 57)
+		 	throw new InvalidIDException(ID);
+		
+		for (int i = 1; i < ID.size(); i++)
+		{
+			int nthElement = (int) ID.charAt(i);
+			if (nthElement < 48 || nthElement > 57)
+				throw new InvalidException(ID);
+		}
+		
 		else{
-			throw new InvalidIDException(ID);
+			this.ID = ID;
 		}
 
 		if(age >= 0){
