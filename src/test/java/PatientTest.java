@@ -32,7 +32,7 @@ public class PatientTest {
 	// Exception thrown due to no zero being included in the ID.
 	@Test
     public void invalidPatientID() {
-        assertThrows(InvalidIDException.class, () -> { Patient patient = new Patient("Alice", "111111111", 21, new PostalCode("K1E-1A4"));});
+        assertThrows(InvalidIDException.class, () -> { Patient patient = new Patient("Alice", "011111111", 21, new PostalCode("K1E-1A4"));});
     }
 
 	// Exception should be thrown due to improper postal code formatting with the space instead of a dash:
