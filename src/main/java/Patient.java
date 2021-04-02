@@ -44,7 +44,7 @@ public class Patient
 		{
 			int nthElement = (int) ID.charAt(i);
 			if (nthElement < 48 || nthElement > 57)
-				throw new InvalidException(ID);
+				throw new InvalidIDException(ID);
 		}
 		
 		this.ID = ID;
