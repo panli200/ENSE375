@@ -40,16 +40,14 @@ public class Patient
 		if (zerothElement < 49 || zerothElement > 57)
 		 	throw new InvalidIDException(ID);
 		
-		for (int i = 1; i < ID.size(); i++)
+		for (int i = 1; i < ID.length(); i++)
 		{
 			int nthElement = (int) ID.charAt(i);
 			if (nthElement < 48 || nthElement > 57)
 				throw new InvalidException(ID);
 		}
 		
-		else{
-			this.ID = ID;
-		}
+		this.ID = ID;
 
 		if(age >= 0){
 			this.age = age;
