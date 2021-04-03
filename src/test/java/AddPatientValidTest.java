@@ -13,7 +13,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {	
-	File pathToBinary = new File("/Users/jacob/Downloads/Firefox 86.0.1.dmg");
+	File pathToBinary = new File("/Applications/Firefox.app");
 	FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 	FirefoxProfile firefoxProfile = new FirefoxProfile();
 	WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);
