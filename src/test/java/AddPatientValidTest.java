@@ -13,10 +13,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {	
-	File pathBinary = new File("firefox-bin");
-	FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
-	FirefoxProfile firefoxProfile = new FirefoxProfile();  
-	WebDriver driver = new FirefoxDriver(firefoxBinary, firefoxProfile);
+	WebDriver driver = new Driver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
 	driver.quit();	
