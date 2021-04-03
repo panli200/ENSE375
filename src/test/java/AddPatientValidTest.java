@@ -12,7 +12,8 @@ public class AddPatientValidTest
 	
 	
 	@Test				
-	public void testSelenium() {	
+	public void testSelenium() {
+	System.setProperty("webdriver.gecko.driver", "geckodriver");
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
