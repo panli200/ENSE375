@@ -14,9 +14,13 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {
-	DesiredCapabilities cap = DesiredCapabilities.firefox();
-	cap.setCapability("marionette", true);
-	WebDriver driver = new FirefoxDriver(cap);
+	System.setProperty("webdriver.chrome.driver", "Applications/Google\ Chrome.app/");
+	ChromeOptions = new ChromeOptions();
+	options.addArguments("headless");
+	WebDriver driver = new ChromeDriver(options);
+// 	DesiredCapabilities cap = DesiredCapabilities.firefox();
+// 	cap.setCapability("marionette", true);
+// 	WebDriver driver = new FirefoxDriver(cap);
 	//System.setProperty("webdriver.gecko.driver", "Users/rabaa/Downloads/geckodriver");	
 	//WebDriver driver = new geckodriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
