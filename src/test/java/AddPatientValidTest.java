@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.By;			
 import org.openqa.selenium.WebDriver;		
-import org.openqa.selenium.firefox.FirefoxDriver;	
+import org.openqa.selenium.firefox.*;	
 import java.io.*;
 
 public class AddPatientValidTest
@@ -13,7 +13,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {	
-	WebDriver driver = new WebDriver();
+	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
 	driver.quit();	
