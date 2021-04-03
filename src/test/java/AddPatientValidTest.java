@@ -4,7 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.By;			
 import org.openqa.selenium.WebDriver;		
-import org.openqa.selenium.firefox.*;	
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.*;
 
 public class AddPatientValidTest
@@ -13,8 +14,11 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {
-	System.setProperty("webdriver.gecko.driver", "Users/rabaa/Downloads/geckodriver");	
-	WebDriver driver = new geckodriver();
+	DesiredCapabilities cap = DesiredCapabilities.firefox();
+	cap.setCapability("marionette", true);
+	WebDriver driver = new FirefoxDriver(cap);
+	//System.setProperty("webdriver.gecko.driver", "Users/rabaa/Downloads/geckodriver");	
+	//WebDriver driver = new geckodriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
 	driver.quit();	
