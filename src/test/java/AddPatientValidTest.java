@@ -13,7 +13,7 @@ public class AddPatientValidTest
 	public void testSelenium() {	
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();				 
-	Assert.assertTrue(title.contains("Demo Guru99 Page")); 		
+	assertTrue(title.contains("Demo Guru99 Page")); 		
 	}
 	
 	@Test
