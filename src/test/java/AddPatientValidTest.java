@@ -13,7 +13,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {	
-	WebDriver driver = new Driver();
+	WebDriver driver = new WebDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
 	driver.quit();	
