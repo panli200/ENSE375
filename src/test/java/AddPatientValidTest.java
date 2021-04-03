@@ -14,7 +14,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {
-	System.setProperty("webdriver.chrome.driver", "Applications/Google\ Chrome.app/");
+	System.setProperty("webdriver.chrome.driver", "Applications/Google Chrome.app/");
 	ChromeOptions = new ChromeOptions();
 	options.addArguments("headless");
 	WebDriver driver = new ChromeDriver(options);
