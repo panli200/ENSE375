@@ -9,12 +9,12 @@ public class AddPatientValidTest
 {
 	
 	
-	@Test				
-	public void testSelenium() {	
-	driver.get("http://demo.guru99.com/test/guru99home/");  
-	String title = driver.getTitle();				 
-	assertTrue(title.contains("Demo Guru99 Page")); 		
-	}
+// 	@Test				
+// 	public void testSelenium() {	
+// 	driver.get("http://demo.guru99.com/test/guru99home/");  
+// 	String title = driver.getTitle();				 
+// 	assertTrue(title.contains("Demo Guru99 Page")); 		
+// 	}
 	
 	@Test
 	public void NormaAdd(){
