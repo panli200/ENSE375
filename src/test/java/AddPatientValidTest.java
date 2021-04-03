@@ -15,9 +15,7 @@ public class AddPatientValidTest
 	@Test				
 	public void testSelenium() {
 	System.setProperty("webdriver.chrome.driver", "Applications/Google Chrome.app/");
-	ChromeOptions = new ChromeOptions();
-	options.addArguments("headless");
-	WebDriver driver = new ChromeDriver(options);
+	WebDriver driver = new ChromeDriver();
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
