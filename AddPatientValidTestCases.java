@@ -21,7 +21,7 @@ public class AppPatientValidTestCases()
 	assertEquals(true, AddLast);
 	}
 	@Test
-	public void NormalAddAge0(){
+	public void NormalAddAgeZero(){
 	App app = new App();
 	boolean AddFirst =  app.addPatient("Patient1", "1", "S4S-4S4", 0);
 	boolean AddLast = app.addPatient("Patient3", "3", "S4S-4S6", 0);
