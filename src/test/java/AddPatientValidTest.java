@@ -2,7 +2,9 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;		
 import org.openqa.selenium.chrome.*;
-import org.openqa.selenium.By;		
+import org.openqa.selenium.By;			
+import org.openqa.selenium.WebDriver;		
+import org.openqa.selenium.firefox.FirefoxDriver;	
 import java.io.*;
 
 public class AddPatientValidTest
@@ -11,7 +13,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {	
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
 	driver.quit();	
