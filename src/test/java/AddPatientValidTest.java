@@ -13,7 +13,8 @@ public class AddPatientValidTest
 	public void testSelenium() {	
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
-	String title = driver.getTitle();				 
+	String title = driver.getTitle();
+	driver.quit();	
 	assertTrue(title.contains("Demo Guru99 Page")); 		
 	}
 	
