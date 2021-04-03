@@ -1,9 +1,7 @@
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;		
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.By;		
 import java.io.*;
 
@@ -13,10 +11,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {	
-	File pathToBinary = new File("/Applications/Firefox.app");
-	FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
-	FirefoxProfile firefoxProfile = new FirefoxProfile();
-	WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);
+	WebDriver driver = new ChromeDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();
 	driver.quit();	
