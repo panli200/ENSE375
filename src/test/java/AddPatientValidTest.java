@@ -14,7 +14,7 @@ public class AddPatientValidTest
 	
 	@Test				
 	public void testSelenium() {
-// 	System.setProperty("webdriver.chrome.driver", "Google Chrome");
+ 	System.setProperty("webdriver.chrome.driver", "chromedriver");
  	WebDriver driver = new ChromeDriver();
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
