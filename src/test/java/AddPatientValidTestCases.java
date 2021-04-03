@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.*;
 
-public class AppPatientValidTestCases()
+public class AppPatientValidTestCases
 {
 	
 	
