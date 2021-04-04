@@ -24,6 +24,8 @@ public class AddPatientValidTest
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
+	File gecko = new File ("geckodriver");
+	gecko.setExecutable(true);
 	System.setProperty("webdriver.firefox.bin", "geckodriver");
  	System.setProperty("webdriver.gecko.driver", "geckodriver⁩");
 	WebDriver driver = new FirefoxDriver();
