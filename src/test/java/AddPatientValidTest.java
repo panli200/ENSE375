@@ -24,7 +24,7 @@ public class AddPatientValidTest
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
-	System.setProperty("webdriver.firefox.bin", "/Applications/Firefox.app/Contents/MacOS/firefox-bin");
+	System.setProperty("webdriver.firefox.bin", "/⁨User/rabaa⁩/Downloads/geckodriver");
  	System.setProperty("webdriver.gecko.driver", "/⁨User/rabaa⁩/Downloads/geckodriver⁩");
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
