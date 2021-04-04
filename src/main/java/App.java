@@ -313,9 +313,10 @@ public class App
     		return false;
 	    }
 	    
-	for (Patient thisPatient : patientList)
-		if (thisPatient.getID().equals(patientID))
-		    return false;
+	Patient existingIDpatient = patientList.getPatient(patientID);
+	    
+	if (existingIDpatient != null) // indicates that the existing ID is already in the list (and thus invalid)
+		return false;
     
     	return patientList.addPatient(patient);
     }
