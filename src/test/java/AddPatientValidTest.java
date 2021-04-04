@@ -24,8 +24,8 @@ public class AddPatientValidTest
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
-	System.setProperty("webdriver.firefox.bin", "Users/rabaa/Downloads/geckodriver");
- 	System.setProperty("webdriver.gecko.driver", "Users/rabaa/Downloads/geckodriver⁩");
+	System.setProperty("webdriver.firefox.bin", "geckodriver");
+ 	System.setProperty("webdriver.gecko.driver", "geckodriver⁩");
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();		
