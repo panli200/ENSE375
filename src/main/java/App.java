@@ -312,6 +312,10 @@ public class App
     		System.out.println( "\tFailed to update the risk code map" );
     		return false;
 	    }
+	    
+	for (Patient thisPatient : patientList)
+		if (thisPatient.getID().equals(patientID);
+		    return false;
     
     	return patientList.addPatient(patient);
     }
