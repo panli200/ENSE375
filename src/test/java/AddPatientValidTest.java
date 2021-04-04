@@ -1,16 +1,20 @@
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;		
-import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.By;			
-import org.openqa.selenium.WebDriver;		
 import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.*;
 
 public class AddPatientValidTest
 {
-	
+	static WebDriver driver;
+	static JavascriptExecutor js;
 	
 	@Test				
 	public void testSelenium() {
@@ -20,12 +24,10 @@ public class AddPatientValidTest
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
- 	System.setProperty("webdriver.gecko.driver", "/Users/rabaa/Downloads/geckodriver");	
- 	WebDriver driver = new FirefoxDriver();
-	driver.get("http://demo.guru99.com/test/guru99home/");  
-	String title = driver.getTitle();
-	driver.quit();	
-	assertTrue(title.contains("Demo Guru99 Page")); 		
+ 	System.setProperty("webdriver.chrome.driver", "/Users/rabaa/Downloads/chromedriver");
+	driver = new ChromeDriver();
+	js = (JavascriptExecutor) driver;
+	driver.get("https://www.freecrm.com/index.html");		
 	}
 	
 	@Test
