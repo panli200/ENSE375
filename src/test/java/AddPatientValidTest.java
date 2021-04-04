@@ -17,13 +17,14 @@ public class AddPatientValidTest
 	static JavascriptExecutor js;
 	
 	@Test				
-	public void testSelenium() {
+	public void testSelenium() throws Exception{
 
 //	System.setProperty("webdriver.chrome.driver", "/Applications/GoogleChrome.app/Contents/MacOS/GoogleChrome");
 // 	WebDriver driver = new ChromeDriver();
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
+	System.setProperty("webdriver.firefox.bin", "/⁨User/rabaa⁩/Downloads/geckodriver");
  	System.setProperty("webdriver.gecko.driver", "/⁨User/rabaa⁩/Downloads/geckodriver⁩");
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
