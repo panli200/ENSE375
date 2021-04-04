@@ -314,7 +314,7 @@ public class App
 	    }
 	    
 	for (Patient thisPatient : patientList)
-		if (thisPatient.getID().equals(patientID);
+		if (thisPatient.getID().equals(patientID))
 		    return false;
     
     	return patientList.addPatient(patient);
