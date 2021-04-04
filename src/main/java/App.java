@@ -267,12 +267,6 @@ public class App
     		System.out.println( "\tInvalid PostalCode" );
 		return false;
 	    }
-
-    	if (!patientList.addPatient(patient))
-	    {
-    		System.out.println( "\tFailed to add a patient to a patientList" );
-    		return false;
-	    }
     
     	int HIndex = patient.getPostalCode().getRegionHorizontalIndex();
     	int VIndex = patient.getPostalCode().getRegionVerticalIndex();
@@ -318,6 +312,6 @@ public class App
 	if (existingIDpatient != null) // indicates that the existing ID is already in the list (and thus invalid)
 		return false;
     
-    	return patientList.addPatient(patient);
+    	return patientList.addPatient(patient); // should ALWAYS be true
     }
 }
