@@ -40,7 +40,7 @@ public class Patient
 		if (zerothElement < 49 || zerothElement > 57)
 		 	throw new InvalidIDException(ID);
 		
-		else if (ID.length |= 9)
+		else if (ID.length() != 9)
 			throw new InvalidIDException(ID);
 		
 		for (int i = 1; i < ID.length(); i++)
