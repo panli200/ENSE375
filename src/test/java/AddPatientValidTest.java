@@ -24,10 +24,10 @@ public class AddPatientValidTest
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
- 	System.setProperty("webdriver.chrome.driver", "/Users/rabaa/Downloads/chromedriver");
-	driver = new ChromeDriver();
-	js = (JavascriptExecutor) driver;
-	driver.get("https://www.freecrm.com/index.html");		
+ 	System.setProperty("webdriver.gecko.driver", "/⁨User/rabaa⁩/Downloads/geckodriver⁩");
+	WebDriver driver = new FirefoxDriver();
+	driver.get("http://demo.guru99.com/test/guru99home/");  
+	String title = driver.getTitle();		
 	}
 	
 	@Test
