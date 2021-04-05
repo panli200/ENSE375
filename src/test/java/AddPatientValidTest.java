@@ -16,7 +16,7 @@ public class AddPatientValidTest
 	ChromeOptions options = new ChromeOptions()
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-dev-shm-usage");
-	WebDriver driver = new ChromeDriver(options)
+	WebDriver driver = new ChromeDriver(options);
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
