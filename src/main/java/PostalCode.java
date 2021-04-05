@@ -20,7 +20,7 @@ public class PostalCode
 			{
 			    int ascii_3 = postalCode.charAt(5);
 				
-			    if (ascii_3 >= 65 && ascii_3 < 90)
+			    if (ascii_3 >= 'A' && ascii_3 < 85)
 			    {
 				int ascii_4 = postalCode.charAt(6);
 				    
