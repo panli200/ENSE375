@@ -26,8 +26,8 @@ public class AddPatientValidTest
 // 	WebDriver driver = new FirefoxDriver(cap);
 	File gecko = new File ("geckodriver");
 	gecko.setExecutable(true);
-	System.setProperty("webdriver.firefox.bin", "geckodriver");
- 	System.setProperty("webdriver.gecko.driver", "geckodriver⁩");
+	System.setProperty("webdriver.firefox.bin", "/home/rabaa/geckodriver");
+ 	System.setProperty("webdriver.gecko.driver", "/home/rabaa/geckodriver⁩");
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();		
