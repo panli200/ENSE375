@@ -13,9 +13,6 @@ import java.io.*;
 
 public class AddPatientValidTest
 {
-	static WebDriver driver;
-	static JavascriptExecutor js;
-	
 	@Test				
 	public void testSelenium() throws Exception{
 
@@ -36,7 +33,7 @@ public class AddPatientValidTest
 	}
 	
 	@Test
-	public void NormaAdd(){
+	public void NormalAdd(){
 	App app = new App();
 	boolean AddNormal = app.addPatient("Patient One", "200000001", "K1S-4S4", 10);
 	assertEquals(true, AddNormal);
