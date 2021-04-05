@@ -29,7 +29,8 @@ public class AddPatientValidTest
 //  	System.setProperty("webdriver.gecko.driver", "/home/rabaa/geckodriver⁩");
 // 	WebDriver driver = new FirefoxDriver();
 // 	driver.get("http://demo.guru99.com/test/guru99home/");  
-	String title = driver.getTitle();		
+	String title = driver.getTitle();
+	System.out.println(title);
 	}
 	
 	@Test
