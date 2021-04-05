@@ -19,17 +19,17 @@ public class AddPatientValidTest
 	@Test				
 	public void testSelenium() throws Exception{
 
-//	System.setProperty("webdriver.chrome.driver", "/Applications/GoogleChrome.app/Contents/MacOS/GoogleChrome");
-// 	WebDriver driver = new ChromeDriver();
+	System.setProperty("webdriver.chrome.driver", "/Applications/GoogleChrome.app/Contents/MacOS/GoogleChrome");
+	WebDriver driver = new ChromeDriver();
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
-	File gecko = new File ("geckodriver");
-	gecko.setExecutable(true);
-	System.setProperty("webdriver.firefox.bin", "/home/rabaa/geckodriver");
- 	System.setProperty("webdriver.gecko.driver", "/home/rabaa/geckodriver⁩");
-	WebDriver driver = new FirefoxDriver();
-	driver.get("http://demo.guru99.com/test/guru99home/");  
+// 	File gecko = new File ("geckodriver");
+// 	gecko.setExecutable(true);
+// 	System.setProperty("webdriver.firefox.bin", "/home/rabaa/geckodriver");
+//  	System.setProperty("webdriver.gecko.driver", "/home/rabaa/geckodriver⁩");
+// 	WebDriver driver = new FirefoxDriver();
+// 	driver.get("http://demo.guru99.com/test/guru99home/");  
 	String title = driver.getTitle();		
 	}
 	
