@@ -19,6 +19,8 @@ public class AddPatientValidTest
 	@Test				
 	public void testSelenium() throws Exception{
 
+	File chromeDriver = new File("chromedriver");
+	chromeDriver.setExecutable(true);
 	System.setProperty("webdriver.chrome.driver", "chromedriver");
 	WebDriver driver = new ChromeDriver();
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
