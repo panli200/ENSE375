@@ -1,13 +1,7 @@
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-import org.openqa.selenium.WebDriver;		
-import org.openqa.selenium.By;			
-import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.*;					
+import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.*;
 
