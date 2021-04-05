@@ -13,7 +13,10 @@ public class AddPatientValidTest
 	File chromeDriver = new File("chromedriver");
 	chromeDriver.setExecutable(true);
 	System.setProperty("webdriver.chrome.driver", "chromedriver");
-	WebDriver driver = new ChromeDriver();
+	ChromeOptions options = new ChromeOptions()
+	options.addArguments("--no-sandbox");
+	options.addArguments("--disable-dev-shm-usage");
+	WebDriver driver = new ChromeDriver(options)
 // 	DesiredCapabilities cap = DesiredCapabilities.firefox();
 // 	cap.setCapability("marionette", true);
 // 	WebDriver driver = new FirefoxDriver(cap);
